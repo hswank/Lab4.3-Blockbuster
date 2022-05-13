@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class VHS extends Movie{
+	private int currentTime;
+	
+	@Override
+	public void play() {
+		ArrayList<String> movieScenes = super.getScenes();
+		System.out.println("Scene " + currentTime + ": " + movieScenes.get(currentTime));
+		if (currentTime >= movieScenes.size()) {
+			rewind();
+		}
+	}
+	
+	public void rewind() {
+		currentTime = 0;
+	}
+}

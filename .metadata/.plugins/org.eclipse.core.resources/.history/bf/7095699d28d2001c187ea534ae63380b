@@ -1,0 +1,16 @@
+
+public class VHS extends Movie{
+	private int currentTime;
+	
+	@Override
+	public void play() {
+		System.out.println("Scene " + currentTime + ": " + super.scenes.get(currentTime));
+		if (currentTime >= super.scenes.size()) {
+			rewind();
+		}
+	}
+	
+	public void rewind() {
+		currentTime = 0;
+	}
+}
