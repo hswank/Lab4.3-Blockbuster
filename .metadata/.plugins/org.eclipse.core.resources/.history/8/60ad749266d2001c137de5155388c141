@@ -87,7 +87,12 @@ public class MovieApp {
 					System.out.println("Watch another scene?");
 					userCont = input.next();
 				} else {
-					movies.get(choice).play();
+					System.out.printf("%n%nWhich scene of " + movies.get(choice).getTitle()
+							+ " would you like to watch? Select 0 to 4:");
+					int sceneSelection = input.nextInt();
+
+					ArrayList<String> movieScenes = movies.get(choice).getScenes();
+					System.out.println(movieScenes.get(sceneSelection));
 
 					System.out.println("Watch another scene?");
 					userCont = input.next();

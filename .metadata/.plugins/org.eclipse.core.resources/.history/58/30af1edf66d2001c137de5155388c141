@@ -12,7 +12,7 @@ public class DVD extends Movie{
 	@Override
 	public void play() {
 		ArrayList<String> movieScenes = super.getScenes();
-		System.out.println("What scene would you like to watch?(0-4)");
+		System.out.println("What scene would you like to watch?(0-5)");
 		super.printScenes();
 		int userChoice = input.nextInt();
 		

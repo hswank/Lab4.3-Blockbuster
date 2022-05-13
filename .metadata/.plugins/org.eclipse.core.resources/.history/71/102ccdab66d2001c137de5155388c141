@@ -37,7 +37,7 @@ public abstract class Movie {
 
 	public void printScenes() {
 		for (String scene : scenes) {
-			System.out.println("Scene " + scenes.indexOf(scene) + ": " + scene);
+			System.out.println("Scene " + (scenes.indexOf(scene) + 1) + ": " + scene);
 		}
 	}
 	
